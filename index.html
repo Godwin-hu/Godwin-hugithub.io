@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GodwinTechApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omokhwa Godwin | GodwinTech Elite</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        :root {
+            --primary-gold: #facc15;
+            --bg-dark: #020617;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at 20% 20%, rgba(250,204,21,0.08), transparent 40%),
+                        radial-gradient(circle at 80% 80%, rgba(59,130,246,0.08), transparent 40%),
+                        var(--bg-dark);
+            color: #f8fafc;
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: rgba(2,6,23,0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 15px 0;
+        }
+
+        .nav-icon {
+            font-size: 1.2rem;
+            color: white;
+            margin-left: 18px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .nav-icon:hover { color: var(--primary-gold); transform: scale(1.2); }
+
+        .glass-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 25px;
+            padding: 35px;
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(250,204,21,0.15);
+            border-color: var(--primary-gold);
+        }
+
+        .profile-container {
+            width: 170px;
+            height: 170px;
+            margin: auto;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(135deg,#facc15,#eab308);
+            box-shadow: 0 0 30px rgba(250,204,21,0.3);
+        }
+
+        .profile-img {
+            width:100%; height:100%;
+            border-radius:50%;
+            object-fit:cover;
+            border: 2px solid var(--bg-dark);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg,#facc15,#eab308);
+            color:#000;
+            padding:14px 35px;
+            border-radius:12px;
+            font-weight:800;
+            text-transform: uppercase;
+            border: none;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .btn-gold:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(250,204,21,0.2); color: #000; }
+
+        .btn-outline-custom {
+            border: 2px solid white;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-outline-custom:hover { background: white; color: black; }
+
+        /* Modal Styling */
+        .modal-content {
+            background: #0f172a;
+            border: 1px solid var(--primary-gold);
+            border-radius: 30px;
+            color: white;
+        }
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .contact-btn:hover {
+            background: var(--primary-gold);
+            color: black;
+            transform: translateX(10px);
+        }
+        .contact-btn i { font-size: 1.5rem; margin-right: 15px; }
+
+        .hero-section { padding:160px 0 80px; text-align:center; }
+        footer i { font-size: 1.8rem; color: white; transition: 0.3s; }
+        footer i:hover { color: var(--primary-gold); transform: translateY(-5px); }
+    </style>
+</head>
+
+<body ng-controller="MainController">
+
+<nav class="navbar fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="text-white fw-bold fs-4 text-decoration-none">GODWIN<span class="text-warning">TECH</span></a>
+        <div class="d-flex align-items-center">
+            <a href="https://wa.me/2349121209886" target="_blank" class="nav-icon text-success"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:godwinomokhwa49@gmail.com" class="nav-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/godwin-omokhwa-7a7150372" target="_blank" class="nav-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Godwin-hu" target="_blank" class="nav-icon"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section container">
+    <div data-aos="zoom-in">
+        <div class="profile-container mb-4">
+            <img src="IMG_0161.JPG" class="profile-img" alt="Omokhwa Godwin">
+        </div>
+
+        <h1 class="display-4 fw-800">Omokhwa <span class="text-warning">Godwin</span></h1>
+        <p class="lead opacity-75">
+            React Native Developer | Full-Stack Architect | Frontend Engineer
+        </p>
+
+        <p class="text-warning fw-bold animate__animated animate__pulse animate__infinite">
+            🚀 Available for High-Impact Roles & Projects
+        </p>
+
+        <div class="mt-4 d-flex justify-content-center gap-3">
+            <a href="#projects" class="btn-outline-custom">View Projects</a>
+            <a href="https://wa.me/2349121209886?text=Hi%20Godwin,%20I'm%20interested%20in%20hiring%20you!" target="_blank" class="btn btn-gold">Hire Me</a>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="glass-card text-center" data-aos="fade-up">
+        <h2 class="text-warning fw-800 mb-4">About Me</h2>
+        <p class="fs-5 px-md-5">
+            I am a highly skilled Developer and the visionary behind <strong>GodwinTech</strong>. 
+            I specialize in building robust, high-performance web and mobile applications that combine 
+            technical precision with world-class user interfaces.
+        </p>
+    </div>
+</section>
+
+<section class="container py-4">
+    <div class="row g-4 text-center">
+        <div class="col-md-6" data-aos="fade-right">
+            <div class="glass-card">
+                <h3 class="text-warning fw-800 mb-3">Our Mission</h3>
+                <p>To redefine digital experiences by providing cutting-edge software solutions that are secure, scalable, and stunningly designed. We empower brands through technical excellence.</p>
+            </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+            <div class="glass-card">
+                <h3 class="text-warning fw-800 mb-3">Our Goal</h3>
+                <p>To be the premier partner for enterprises seeking full-stack innovation. We focus on lean architecture, modern frameworks, and building long-term value.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="glass-card text-center" data-aos="fade-up">
+        <h2 class="fw-800 mb-3">Let's Build Together</h2>
+        <p class="lead opacity-75">We look forward to working with you on your next big project.</p>
+        <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#contactModal">Start a Conversation</button>
+    </div>
+</section>
+
+<section id="projects" class="container py-5">
+    <h2 class="text-center fw-800 mb-5">GodwinTech <span class="text-warning">Vault</span></h2>
+    <div class="row g-4">
+        <div class="col-md-4" ng-repeat="p in projects" data-aos="flip-left">
+            <div class="glass-card text-center d-flex flex-column">
+                <h5 class="text-warning fw-bold">{{p.name}}</h5>
+                <p class="small opacity-75">{{p.desc}}</p>
+                <div class="mb-3 mt-auto"><span class="badge bg-dark border border-warning">{{p.tech}}</span></div>
+                <div>
+                    <a href="{{p.github}}" target="_blank" class="btn btn-sm btn-outline-light px-3">GitHub</a>
+                    <a href="{{p.live}}" target="_blank" class="btn btn-sm btn-warning px-3 fw-bold">Live</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h4 class="modal-title fw-800 text-warning">Contact Godwin</h4>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <a href="https://wa.me/2349121209886" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp text-success"></i> WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/in/godwin-omokhwa-7a7150372" target="_blank" class="contact-btn">
+                    <i class="fab fa-linkedin text-primary"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Godwin-hu" target="_blank" class="contact-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="tel:09121209886" class="contact-btn">
+                    <i class="fas fa-phone text-warning"></i> Call: 09121209885
+                </a>
+                <a href="mailto:Godwinomokhwa49@gmail.com" class="contact-btn">
+                    <i class="fas fa-envelope text-danger"></i> Email
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-5 border-top border-secondary mt-5">
+    <div class="container">
+        <h3 class="text-warning fw-800">GODWIN<span class="text-white">TECH</span></h3>
+        <div class="mt-4 d-flex justify-content-center gap-4">
+            <a href="mailto:godwinomokhwa49@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/2349121209886" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/godwin-omokhwa-7a7150372" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Godwin-hu" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="mt-4 opacity-50">Lagos, Nigeria | 0912120988</p>
+        <p class="small opacity-25">© 2026 GodwinTech. Engineered for Excellence.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    var app = angular.module('GodwinTechApp', []);
+    app.controller('MainController', function($scope) {
+        $scope.projects = [
+            { name: 'Elite CMS', desc: 'Secure delivery for global brands.', tech: 'Angular • Node.js', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'Mobile App UI', desc: 'High-performance React Native UI components.', tech: 'React Native', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'Data Dashboard', desc: 'Admin interface for real-time analytics.', tech: 'JavaScript • Bootstrap', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'FinTech Engine', desc: 'Secure transaction processing module.', tech: 'React • Firebase', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'API Gateway', desc: 'Scalable backend routing system.', tech: 'Node.js • Express', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'Social Connect', desc: 'Micro-interaction mobile social app.', tech: 'React Native • Redux', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'E-Comm Pro', desc: 'Full-featured retail storefront.', tech: 'HTML • CSS • JS', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'Crypto Tracker', desc: 'Real-time price monitoring dashboard.', tech: 'Vue.js • Axios', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'Task Master', desc: 'Productivity tool with offline support.', tech: 'JavaScript • PWA', github: 'https://github.com/Godwin-hu', live: '#' },
+            { name: 'Academic Portal', desc: 'Robust school management interface.', tech: 'Bootstrap • JQuery', github: 'https://github.com/Godwin-hu', live: '#' }
+        ];
+    });
+</script>
+</body>
+</html>
